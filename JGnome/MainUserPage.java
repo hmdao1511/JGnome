@@ -40,7 +40,7 @@ public class MainUserPage {
         // Create Border for the application and the thickness of the border
         Border border = BorderFactory.createLineBorder(Color.GREEN, 3);
         // For adding an image to the frame as a label
-        ImageIcon image = new ImageIcon("../random.png");
+        ImageIcon image = new ImageIcon("random.png");
 
         // Label items for the frame
         JLabel label = new JLabel();

@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         UserCredentials userCredentials = new UserCredentials();
         Login login = new Login(userCredentials.getLoginInfo());
-
+        System.out.println("Test");
     }
 
 }
