@@ -25,6 +25,9 @@ public class Login implements ActionListener {
     JLabel usernameLabel = new JLabel("Username:");
     JLabel passwordLabel = new JLabel("Password:");
     JLabel message = new JLabel();
+    
+    // Tester var (please delete after finishing testing)
+    JButton tester = new JButton("Test");
 
     HashMap<String, String> loginInfoDatabase = new HashMap<>();
 
@@ -56,6 +59,11 @@ public class Login implements ActionListener {
         loginButton.addActionListener(this);
         resetButton.addActionListener(this);
         createAccountButton.addActionListener(this);
+        
+        // Tester block (please delete after finishing testing)
+        tester.setBounds(50, 192, 100, 30);
+        tester.setFocusable(false);
+        tester.addActionListener(this);
 
         frame.add(loginLabel);
         frame.add(usernameLabel);
@@ -66,6 +74,8 @@ public class Login implements ActionListener {
         frame.add(loginButton);
         frame.add(resetButton);
         frame.add(createAccountButton);
+        // Delete this line below if you finished testing
+        frame.add(tester);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("JGnome Launcher");
@@ -99,6 +109,12 @@ public class Login implements ActionListener {
         if (e.getSource() == createAccountButton) {
             frame.dispose();
             NewAccount newAccount = new NewAccount(loginInfoDatabase);
+        }
+        
+        // Tester block (please delete after finishing testing)
+        if(e.getSource() == tester) {
+        	frame.dispose();
+        	MainUserPage mainUserPage = new MainUserPage("test");
         }
     }
 }
