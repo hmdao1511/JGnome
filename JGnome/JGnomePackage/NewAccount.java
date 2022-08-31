@@ -99,6 +99,8 @@ public class NewAccount implements ActionListener {
                 passwordField.setText("");
                 UserCredentials retrieveUsers = new UserCredentials();
                 retrieveUsers.addUser(userInput, passwordInput);
+                registerButton.setVisible(false);
+                resetButton.setVisible(false);
             }
         }
 
